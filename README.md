@@ -1,10 +1,15 @@
 # sysDNS
 
-The single [`sysdns/`](sysdns/) project contains the completed work for
-Phases 1 and 2:
+[`sysdns/`](sysdns/) is a from-scratch DNS resolver in C.
 
-- Phase 1: C11 project foundation, CLI, help/version, and Makefile targets.
-- Phase 2: DNS header representation and bounds-checked big-endian
-  serialization/deserialization.
+It encodes queries, sends them over UDP, parses answers (including compressed
+names), retries on timeout, caches records for their TTL inside one process,
+and can walk from a root server with `--recursive`.
 
-DNS queries are not sent yet. Network transport belongs to a later phase.
+```sh
+cd sysdns
+mingw32-make test
+./sysdns.exe example.com A --server 1.1.1.1
+```
+
+See [sysdns/README.md](sysdns/README.md) for the protocol notes and the build.
