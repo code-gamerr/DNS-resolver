@@ -1,0 +1,13 @@
+*.exe
+*.o
+*.obj
+*.out
+*.dSYM/
+.DS_Store
+/sysdns
+/test_phase2
+/test_encode
+/test_query
+/test_parse
+/test_records
+/test_cache

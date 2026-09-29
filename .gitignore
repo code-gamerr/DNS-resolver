@@ -1,7 +1,7 @@
-sysdns
-sysdns.exe
+*.exe
 *.o
 *.obj
 *.out
 *.dSYM/
 .DS_Store
+/test_phase2
